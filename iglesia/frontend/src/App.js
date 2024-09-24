@@ -6,7 +6,7 @@ import FormMatrimonios from './pages/FormMatrimonios';
 import FormCatequesis from './pages/FormCatequesis';
 import FormConfirmacion from './pages/FormConfirmacion';
 import HistorialCertificados from './pages/HistorialCertificados';
-import VistaFormularioBautizo from './pages/VistaFormBautiso';
+import VistaFormBautizo from './pages/VistaFormBautiso';
 
 
 function App() {

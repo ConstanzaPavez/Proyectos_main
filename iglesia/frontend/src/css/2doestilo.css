@@ -30,15 +30,16 @@
 .button-container {
     display: flex;
     justify-content: space-between; /* Para separar los botones */
-    gap: 10px; /* Espacio entre los botones */
-    margin-top: 20px;
+    gap: 20px; /* Espacio entre los botones */
+    margin-top: 40px;
+    color: #000;
 }
 
 .button-container button {
     flex-grow: 1; /* Ocupar el mismo ancho */
     padding: 10px 20px;
     border: 2px solid #000;
-    background-color: #fff;
+    background-color: #fffbfb;
     cursor: pointer;
     font-size: 16px;
     

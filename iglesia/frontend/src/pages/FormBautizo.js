@@ -115,7 +115,7 @@ const BaptismForm = () => {
             <div className="button-container">
               <a href="/FormBautizo">Enviar</a>
               <a href="/" >Volver</a>
-              <a href="/VistaFrormBautizmo"> Vista Formulario Completado</a>
+              <a href="/VistaFormBautizo"> Vista Formulario Completado</a>
             </div>
           </div>
 
