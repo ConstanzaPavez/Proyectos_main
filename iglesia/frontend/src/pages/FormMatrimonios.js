@@ -127,6 +127,17 @@ const MarriageCertificateForm = () => {
           <label>En constancia, sello y firmo en Concepción el día:</label>
           <input type="date" name="fechaEmision" value={formData.fechaEmision} onChange={handleChange} required />
         </div>
+        <div className="form-group">
+            <label><strong>Firma y timbre Parroquia:</strong></label>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+          </div> 
         <div className="BOTON">
           <button type="submit">Enviar</button>
           <button type="button"> Volver</button>

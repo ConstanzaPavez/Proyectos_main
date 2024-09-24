@@ -65,6 +65,7 @@ const BaptismalCertificateForm = () => {
               <label>Don:</label>
               <input type="text" name="padrino" value={formData.padrino} onChange={handleChange} required />
             </div>
+            <br></br>
             <div>
               <label>Doña:</label>
               <input type="text" name="madrina" value={formData.madrina} onChange={handleChange} required />
@@ -102,7 +103,14 @@ const BaptismalCertificateForm = () => {
 
           <div className="form-group">
             <label><strong>Firma y timbre Parroquia:</strong></label>
-            <input type="text" name="firma" value={formData.firma} onChange={handleChange} required />
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
           </div>
 
           <div className="BOTON">
