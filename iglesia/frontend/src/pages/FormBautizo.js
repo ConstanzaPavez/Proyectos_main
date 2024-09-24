@@ -111,9 +111,13 @@ const BaptismForm = () => {
             <input type="date" name="issueDate" value={formData.issueDate} onChange={handleChange} required />
           </div>
 
-          <button id="volverBtn">Volver</button>
-
-          
+          <div className="form-group">
+            <div className="button-container">
+              <a href="/FormBautizo">Enviar</a>
+              <a href="/" >Volver</a>
+              <a href="/VistaFrormBautizmo"> Vista Formulario Completado</a>
+            </div>
+          </div>
 
 
         </form>

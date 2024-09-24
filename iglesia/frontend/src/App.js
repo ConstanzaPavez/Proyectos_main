@@ -6,6 +6,8 @@ import FormMatrimonios from './pages/FormMatrimonios';
 import FormCatequesis from './pages/FormCatequesis';
 import FormConfirmacion from './pages/FormConfirmacion';
 import HistorialCertificados from './pages/HistorialCertificados';
+import VistaFormularioBautizo from './pages/VistaFormBautiso';
+
 
 function App() {
   return (
@@ -17,9 +19,13 @@ function App() {
         <Route path="/FormCatequesis" element={<FormCatequesis />} />
         <Route path="/FormConfirmacion" element={<FormConfirmacion />} />
         <Route path="/HistorialCertificados" element={<HistorialCertificados />} />
+        <Route path="/VistaFormBautizo" element={<VistaFormBautizo />} />
       </Routes>
     </Router>
   );
 }
 
 export default App;
+
+
+
