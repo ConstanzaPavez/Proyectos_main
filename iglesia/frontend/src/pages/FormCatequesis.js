@@ -115,8 +115,8 @@ const BaptismalCertificateForm = () => {
 
           <div className="BOTON">
             <button type="submit">Enviar</button>
-            <button type="button">Volver</button>
-            <button type="reset">Restablecer formulario</button>
+            <a href="/"> Volver</a>
+            <a href="/VistaFormCatequesis"> Formulario Relleno de catequesis</a>
           </div>
         </form>
       </div>

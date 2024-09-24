@@ -52,46 +52,46 @@ const ConfirmationForm = () => {
           <p>Parroquia blablablablablal</p>
         </div>
       </div>
-    <div className="formulario-container" >
-      <h1>Certificado de Confirmación</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label>Número del libro:</label>
-          <input type="text" name="libro" value={formData.libro} onChange={handleChange} required />
-        </div>
-        <div className="form-group">
-          <label>Número de la página:</label>
-          <input type="text" name="pagina" value={formData.pagina} onChange={handleChange}  required />
-        </div>
-        <div className="form-group" >
-          <label>Fecha :</label>
-          <input type="date" name="fecha" value={formData.fecha} onChange={handleChange}  required />
-        </div>
-        <div className="form-group">
-          <label>Nombre del confirmado:</label>
-          <input type="text" name="nombreConfirmado" value={formData.nombreConfirmado} onChange={handleChange} required />
-        </div>
-        <div className="form-group">
-          <label>Monseñor:</label>
-          <input type="text" name="monsenor" value={formData.monsenor} onChange={handleChange} required />
-        </div>
-        <div className="form-group" >
-          <label>Hijo(a) de :</label>
-          <input type="text" name="de" value={formData.de} onChange={handleChange}  required />
-        </div>
-        <div className="form-group">
-          <label>y de:</label>
-          <input type="text" name="y" value={formData.y} onChange={handleChange} required />
-        </div>
-        <div className="form-group" >
-          <label>Padrino (o) Madrina:</label>
-          <input type="text" name="padrinoMadrina" value={formData.padrinoMadrina} onChange={handleChange} required />
-        </div>
-        <div className="form-group">
-          <label>En constancia, sello y firmo en Concepción el día:</label>
-          <input type="date" name="fechaEmision" value={formData.fechaEmision} onChange={handleChange} required />
-        </div>
-        <div className="form-group">
+      <div className="formulario-container" >
+        <h1>Certificado de Confirmación</h1>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label>Número del libro:</label>
+            <input type="text" name="libro" value={formData.libro} onChange={handleChange} required />
+          </div>
+          <div className="form-group">
+            <label>Número de la página:</label>
+            <input type="text" name="pagina" value={formData.pagina} onChange={handleChange} required />
+          </div>
+          <div className="form-group" >
+            <label>Fecha :</label>
+            <input type="date" name="fecha" value={formData.fecha} onChange={handleChange} required />
+          </div>
+          <div className="form-group">
+            <label>Nombre del confirmado:</label>
+            <input type="text" name="nombreConfirmado" value={formData.nombreConfirmado} onChange={handleChange} required />
+          </div>
+          <div className="form-group">
+            <label>Monseñor:</label>
+            <input type="text" name="monsenor" value={formData.monsenor} onChange={handleChange} required />
+          </div>
+          <div className="form-group" >
+            <label>Hijo(a) de :</label>
+            <input type="text" name="de" value={formData.de} onChange={handleChange} required />
+          </div>
+          <div className="form-group">
+            <label>y de:</label>
+            <input type="text" name="y" value={formData.y} onChange={handleChange} required />
+          </div>
+          <div className="form-group" >
+            <label>Padrino (o) Madrina:</label>
+            <input type="text" name="padrinoMadrina" value={formData.padrinoMadrina} onChange={handleChange} required />
+          </div>
+          <div className="form-group">
+            <label>En constancia, sello y firmo en Concepción el día:</label>
+            <input type="date" name="fechaEmision" value={formData.fechaEmision} onChange={handleChange} required />
+          </div>
+          <div className="form-group">
             <label><strong>Firma y timbre Parroquia:</strong></label>
             <br></br>
             <br></br>
@@ -102,15 +102,14 @@ const ConfirmationForm = () => {
             <br></br>
             <br></br>
           </div>
-        <div className="BOTON">
-          <button type="submit">Enviar</button>
-          
-          <button type="button"> Volver</button>
-          <button type="reset"> Formulario de Confirmación </button>
-        </div>
-      </form>
+          <div className="BOTON">
+            <button type="submit">Enviar</button>
+            <a href="/"> Volver</a>
+            <a href="/VistaFormBautizo"> Formulario Relleno de Confirmación</a>
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
   );
 };
 

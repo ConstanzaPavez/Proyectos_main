@@ -1,19 +1,25 @@
 import React, { useState } from 'react';
+import '../css/estilo.css';
+import '../css/2doestilo.css';
+import '../css/prueba.css';
 
-const FormularioCertificadoBautizo = () => {
+const MarriageCertificateForm = () => {
   const [formData, setFormData] = useState({
     numeroLibro: '',
     numeroPagina: '',
-    nombreBautizado: '',
-    run: '',
-    fechaNacimiento: '',
-    lugarNacimiento: '',
-    padre: '',
-    madre: '',
-    padrinos: '',
-    doyFe: '',
-    nota: '',
-    fechaEmision: '',
+    nombreParroquia: 'Parroquia San Francisco de Asís',
+    fecha: '',
+    nombreSacerdote: '',
+    nombreNovio: '',
+    lugarNacimientoNovio: '',
+    padreNovio: '',
+    madreNovio: '',
+    nombreNovia: '',
+    lugarNacimientoNovia: '',
+    padreNovia: '',
+    madreNovia: '',
+    testigos: '',
+    issueDate: ''
   });
 
   const handleChange = (e) => {
@@ -26,68 +32,122 @@ const FormularioCertificadoBautizo = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes manejar el envío de los datos del formulario
+    // Aquí se puede manejar el envío de los datos del formulario
     console.log(formData);
   };
 
   return (
-    <div className="formulario-container" style={{ backgroundColor: '#fbe9d2', padding: '20px', borderRadius: '8px', maxWidth: '600px', margin: '0 auto' }}>
-      <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>Certificado de Bautizo</h1>
+    <div class="todo">
+      <div class="navbar">
+        <a class="" href="/"> Busqueda </a>
+        <a href=""> Reserva </a>
+        <a href=""> Inventario </a>
+        <a href=""> Aporte </a>
+        <a href=""> Donación </a>
+        <a href=""> Información </a>
+        <div class="topnav-right">
+          <a href="#search"> Buscar </a>
+          <a href="#about"> Login </a>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="left-content">
+          <p>Arzobispado de la Santísima Concepción</p>
+        </div>
+        <div class="right-content">
+
+          <p>Parroquia blablablablablal</p>
+        </div>
+      </div>
+      <div className="formulario-container" >
+      <h1>Certificado de Matrimonio</h1>
       <form onSubmit={handleSubmit}>
-        <div className="form-group" style={{ marginBottom: '15px' }}>
+        <div className="form-group">
           <label>Número del libro:</label>
-          <input type="text" name="numeroLibro" value={formData.numeroLibro} onChange={handleChange} style={{ width: '100%', padding: '8px' }} required />
+
         </div>
-        <div className="form-group" style={{ marginBottom: '15px' }}>
+        <div className="form-group">
           <label>Número de la página:</label>
-          <input type="text" name="numeroPagina" value={formData.numeroPagina} onChange={handleChange} style={{ width: '100%', padding: '8px' }} required />
+
         </div>
-        <div className="form-group" style={{ marginBottom: '15px' }}>
-          <label>Nombre del bautizado:</label>
-          <input type="text" name="nombreBautizado" value={formData.nombreBautizado} onChange={handleChange} style={{ width: '100%', padding: '8px' }} required />
+        <div className="form-group">
+          <label>Parroquia:</label>
+
         </div>
-        <div className="form-group" style={{ marginBottom: '15px' }}>
-          <label>Run:</label>
-          <input type="text" name="run" value={formData.run} onChange={handleChange} style={{ width: '100%', padding: '8px' }} required />
+        <div className="form-group">
+          <label>Fecha de matrimonio:</label>
+
         </div>
-        <div className="form-group" style={{ marginBottom: '15px' }}>
-          <label>Nacido el día:</label>
-          <input type="date" name="fechaNacimiento" value={formData.fechaNacimiento} onChange={handleChange} style={{ width: '100%', padding: '8px' }} required />
+        
+        <div className="form-group">
+          <label>El padre:</label>
+
         </div>
-        <div className="form-group" style={{ marginBottom: '15px' }}>
-          <label>Lugar de nacimiento del bautizado:</label>
-          <input type="text" name="lugarNacimiento" value={formData.lugarNacimiento} onChange={handleChange} style={{ width: '100%', padding: '8px' }} required />
+        <h2>Datos del Novio</h2>
+        <div className="form-group">
+          <label>Nombre del novio:</label>
+
         </div>
-        <div className="form-group" style={{ marginBottom: '15px' }}>
-          <label>Hijo(a) de:</label>
-          <input type="text" name="padre" value={formData.padre} onChange={handleChange} style={{ width: '100%', padding: '8px' }} required />
+        <div className="form-group">
+          <label>Lugar de nacimiento del novio:</label>
+
         </div>
-        <div className="form-group" style={{ marginBottom: '15px' }}>
-          <label>y de:</label>
-          <input type="text" name="madre" value={formData.madre} onChange={handleChange} style={{ width: '100%', padding: '8px' }} required />
+        <div className="form-group">
+          <label>Padre del novio:</label>
+
         </div>
-        <div className="form-group" style={{ marginBottom: '15px' }}>
-          <label>Padrinos:</label>
-          <input type="text" name="padrinos" value={formData.padrinos} onChange={handleChange} style={{ width: '100%', padding: '8px' }} required />
+        <div className="form-group">
+          <label>Madre del novio:</label>
+
         </div>
-        <div className="form-group" style={{ marginBottom: '15px' }}>
-          <label>Doy fe:</label>
-          <input type="text" name="doyFe" value={formData.doyFe} onChange={handleChange} style={{ width: '100%', padding: '8px' }} required />
+        <h2>Datos de la Novia</h2>
+        <div className="form-group">
+          <label>Nombre de la novia:</label>
+
         </div>
-        <div className="form-group" style={{ marginBottom: '15px' }}>
-          <label>Nota:</label>
-          <input type="text" name="nota" value={formData.nota} onChange={handleChange} style={{ width: '100%', padding: '8px' }} />
+        <div className="form-group">
+          <label>Lugar de nacimiento de la novia:</label>
+
         </div>
-        <div className="form-group" style={{ marginBottom: '15px' }}>
+        <div className="form-group">
+          <label>Padre de la novia:</label>
+
+        </div>
+        <div className="form-group">
+          <label>Madre de la novia:</label>
+
+        </div>
+        <div className="form-group">
+          <label>Testigos del acto:</label>
+
+        </div>
+        
+        <div className="form-group">
           <label>En constancia, sello y firmo en Concepción el día:</label>
-          <input type="date" name="fechaEmision" value={formData.fechaEmision} onChange={handleChange} style={{ width: '100%', padding: '8px' }} required />
+
         </div>
-        <div style={{ textAlign: 'center' }}>
-          <button type="submit" style={{ padding: '10px 20px', backgroundColor: '#4CAF50', color: 'white', border: 'none', borderRadius: '5px' }}>Enviar</button>
-        </div>
+        <div className="form-group">
+            <label><strong>Firma y timbre Parroquia:</strong></label>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+          </div> 
+          <div className="BOTON">
+            <button type="submit">Enviar</button>
+            <a href="/"> Volver</a>
+            <a href="/VistaFormMatrimonio"> Formulario Relleno de Matrimonio</a>
+          </div>
       </form>
     </div>
+  </div>
   );
 };
 
-export default FormularioCertificadoBautizo;
+export default MarriageCertificateForm;
+

@@ -3,6 +3,7 @@ import '../css/estilo.css';
 import '../css/2doestilo.css';
 import '../css/prueba.css';
 
+
 const BaptismForm = () => {
     const [formData, setFormData] = useState({
         bookNumber: '',
@@ -54,74 +55,79 @@ const BaptismForm = () => {
                 <div class="left-content">
                     <p>Arzobispado de la Santísima Concepción</p>
                 </div>
+                <img src="logo.png" alt="Logo de la iglesia" className="avatar" />
                 <div class="right-content">
-
                     <p>Parroquia blablablablablal</p>
                 </div>
             </div>
-            <div className="formulario">
-                <h1>Certificado de Bautizo</h1>
-                <form onSubmit={handleSubmit} className="personal-data-form">
+            <div className="formulario-container" >
+                <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>Certificado de Bautizo</h1>
+                <form onSubmit={handleSubmit}>
                     <div className="form-group">
                         <label>Número del libro:</label>
+                        
                     </div>
                     <div className="form-group">
                         <label>Número de la página:</label>
-
+                        
                     </div>
                     <div className="form-group">
                         <label>Nombre del bautizado:</label>
-
+                        
                     </div>
                     <div className="form-group">
                         <label>Run:</label>
-
+                        
                     </div>
                     <div className="form-group">
                         <label>Nacido el día:</label>
-
+                    
                     </div>
                     <div className="form-group">
                         <label>Lugar de nacimiento del bautizado:</label>
-
+                    
                     </div>
                     <div className="form-group">
                         <label>Hijo(a) de:</label>
-
+                    
                     </div>
                     <div className="form-group">
                         <label>y de:</label>
-
+                    
                     </div>
                     <div className="form-group">
                         <label>Padrinos:</label>
-
+                    
                     </div>
                     <div className="form-group">
                         <label>Doy fe:</label>
-
+                    
                     </div>
                     <div className="form-group">
                         <label>Nota:</label>
-
+                    
                     </div>
                     <div className="form-group">
                         <label>En constancia, sello y firmo en Concepción el día:</label>
-
+                
                     </div>
-
                     <div className="form-group">
-                        <div className="button-container">
-                            <a href="/FormBautizo">Enviar</a>
-                            <a href="/" >Volver</a>
-                        </div>
+                        <label><strong>Firma y timbre Parroquia:</strong></label>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
                     </div>
-
-
-
-
+                    <div className="BOTON">
+                        <button type="submit">Enviar</button>
+                        <a href="/"> Volver </a>
+                        <a href="/VistaFormBautizo"> Formulario Relleno de Bautizo</a>
+                    </div>
                 </form>
-
             </div>
 
         </div>

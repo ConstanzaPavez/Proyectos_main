@@ -3,6 +3,7 @@ import '../css/estilo.css';
 import '../css/2doestilo.css';
 import '../css/prueba.css';
 
+
 const BaptismForm = () => {
   const [formData, setFormData] = useState({
     bookNumber: '',
@@ -54,8 +55,8 @@ const BaptismForm = () => {
         <div class="left-content">
           <p>Arzobispado de la Santísima Concepción</p>
         </div>
+        <img src="logo.png" alt="Logo de la iglesia" className="avatar" />
         <div class="right-content">
-
           <p>Parroquia blablablablablal</p>
         </div>
       </div>
@@ -123,8 +124,8 @@ const BaptismForm = () => {
           </div>
           <div className="BOTON">
             <button type="submit">Enviar</button>
-            <button type="button"> Volver</button>
-            <button type="reset"> Formulario de Bautizo</button>
+            <a href="/"> Volver</a>
+            <a href="/VistaFormBautizo"> Formulario Relleno de Bautizo</a>
           </div>
         </form>
       </div>
