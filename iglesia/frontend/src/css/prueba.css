@@ -1,0 +1,74 @@
+.personal-data-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    width: 100%;
+    background-color: #9c5b32; /* Color marrón similar */
+    overflow: hidden;
+    padding: 10px 0;
+    color: #555;
+}
+
+/* Estilo de los enlaces de la barra de navegación */
+.navbar a {
+    float: left;
+    display: block;
+    color: white; /* Color blanco para el texto */
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Efecto al pasar el cursor sobre los enlaces */
+.navbar a:hover {
+    background-color: #555;
+    color: white;
+}
+
+/* Estilos adicionales para un mejor diseño */
+.navbar a.active {
+    background-color: #4CAF50;
+    color: white;
+}
