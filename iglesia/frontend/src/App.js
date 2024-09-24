@@ -7,7 +7,9 @@ import FormCatequesis from './pages/FormCatequesis';
 import FormConfirmacion from './pages/FormConfirmacion';
 import HistorialCertificados from './pages/HistorialCertificados';
 import VistaFormBautizo from './pages/VistaFormBautiso';
-
+import VistaFormCatequesis from 'pages/VistaFormCatequesis';
+import VistaFormConfirmacion from 'pages/VistaFormConfirmacion';
+import VistaFormMatrimonio from 'pages/VistaFormMatrimonio';
 
 function App() {
   return (
@@ -20,6 +22,10 @@ function App() {
         <Route path="/FormConfirmacion" element={<FormConfirmacion />} />
         <Route path="/HistorialCertificados" element={<HistorialCertificados />} />
         <Route path="/VistaFormBautizo" element={<VistaFormBautizo />} />
+        <Route path="/VistaFormCatequesis" element={<VistaFormBautizo />} />
+        <Route path="/VistaFormConfirmacion" element={<VistaFormBautizo />} />
+        <Route path="/VistaFormMatrimonio" element={<VistaFormBautizo />} />
+
       </Routes>
     </Router>
   );
