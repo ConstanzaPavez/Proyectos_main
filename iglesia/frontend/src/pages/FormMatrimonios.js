@@ -1,21 +1,24 @@
 import React, { useState } from 'react';
 import '../css/estilo.css';
 import '../css/2doestilo.css';
+import '../css/prueba.css';
 
 const MarriageCertificateForm = () => {
   const [formData, setFormData] = useState({
-    bookNumber: '',
-    pageNumber: '',
-    date: '',
-    baptizedName: '',
-    run: '',
-    birthDate: '',
-    birthPlace: '',
-    fatherName: '',
-    motherName: '',
-    godparents: '',
-    certifier: '',
-    note: '',
+    numeroLibro: '',
+    numeroPagina: '',
+    nombreParroquia: 'Parroquia San Francisco de Asís',
+    fecha: '',
+    nombreSacerdote: '',
+    nombreNovio: '',
+    lugarNacimientoNovio: '',
+    padreNovio: '',
+    madreNovio: '',
+    nombreNovia: '',
+    lugarNacimientoNovia: '',
+    padreNovia: '',
+    madreNovia: '',
+    testigos: '',
     issueDate: ''
   });
 
@@ -29,14 +32,13 @@ const MarriageCertificateForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes manejar el envío de los datos del formulario, por ejemplo, enviarlos a tu backend
+    // Aquí se puede manejar el envío de los datos del formulario
     console.log(formData);
   };
 
   return (
-    <div className="todo">
+    <div class="todo">
       <div class="navbar">
-
         <a class="" href="/"> Busqueda </a>
         <a href=""> Reserva </a>
         <a href=""> Inventario </a>
@@ -58,68 +60,78 @@ const MarriageCertificateForm = () => {
           <p>Parroquia blablablablablal</p>
         </div>
       </div>
-      <div className="formulario">
-        <h1>Certificado de Matrimonio</h1>
-        <form onSubmit={handleSubmit} className="personal-data-form">
-          <div className="form-group">
-            <label>Número del libro:</label>
-            <input type="text" name="bookNumber" value={formData.bookNumber} onChange={handleChange} required />
-          </div>
-          <div className="form-group">
-            <label>Número de la página:</label>
-            <input type="text" name="pageNumber" value={formData.pageNumber} onChange={handleChange} required />
-          </div>
-          <div className="form-group">
-            <label>Nombre del bautizado:</label>
-            <input type="text" name="baptizedName" value={formData.baptizedName} onChange={handleChange} required />
-          </div>
-          <div className="form-group">
-            <label>Run:</label>
-            <input type="text" name="run" value={formData.run} onChange={handleChange} required />
-          </div>
-          <div className="form-group">
-            <label>Nacido el día:</label>
-            <input type="date" name="date" value={formData.date} onChange={handleChange} required />
-          </div>
-          <div className="form-group">
-            <label>Lugar de nacimiento del bautizado:</label>
-            <input type="text" name="birthPlace" value={formData.birthPlace} onChange={handleChange} required />
-          </div>
-          <div className="form-group">
-            <label>Hijo(a) de:</label>
-            <input type="text" name="aName" value={formData.aName} onChange={handleChange} required />
-          </div>
-          <div className="form-group">
-            <label>y de:</label>
-            <input type="text" name="bName" value={formData.bName} onChange={handleChange} required />
-          </div>
-          <div className="form-group">
-            <label>Padrinos:</label>
-            <input type="text" name="godparents" value={formData.godparents} onChange={handleChange} required />
-          </div>
-          <div className="form-group">
-            <label>Doy fe:</label>
-            <input type="text" name="certifier" value={formData.certifier} onChange={handleChange} required />
-          </div>
-          <div className="form-group">
-            <label>Nota:</label>
-            <input type="text" name="note" value={formData.note} />
-          </div>
-          <div className="form-group">
-            <label>En constancia, sello y firmo en Concepción el día:</label>
-            <input type="date" name="issueDate" value={formData.issueDate} onChange={handleChange} required />
-          </div>
-          <div className="form-group">
-            <div className="button-container">
-              <a href="/FormMatrimonio">Enviar</a>
-              <a href="/" >Volver</a>
-            </div>
-          </div>
-        </form>
-
-      </div>
-
+      <div className="formulario-container" >
+      <h1>Certificado de Matrimonio</h1>
+      <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label>Número del libro:</label>
+          <input type="text" name="libro" value={formData.libro} onChange={handleChange} style={{ width: '100%', padding: '8px' }} required />
+        </div>
+        <div className="form-group">
+          <label>Número de la página:</label>
+          <input type="text" name="pagina" value={formData.pagina} onChange={handleChange} style={{ width: '100%', padding: '8px' }} required />
+        </div>
+        <div className="form-group">
+          <label>Fecha de matrimonio:</label>
+          <input type="date" name="fechaMatrimonio" value={formData.fechaMatrimonio} onChange={handleChange} style={{ width: '100%', padding: '8px' }} required />
+        </div>
+        <div className="form-group">
+          <label>Parroquia:</label>
+          <input type="text" name="parroquia" value={formData.parroquia} onChange={handleChange} style={{ width: '100%', padding: '8px' }} required />
+        </div>
+        <h2>Datos del Novio</h2>
+        <div className="form-group">
+          <label>Nombre del novio:</label>
+          <input type="text" name="nombreNovio" value={formData.nombreNovio} onChange={handleChange} style={{ width: '100%', padding: '8px' }} required />
+        </div>
+        <div className="form-group">
+          <label>Lugar de nacimiento del novio:</label>
+          <input type="text" name="lugarNacimientoNovio" value={formData.lugarNacimientoNovio} onChange={handleChange} style={{ width: '100%', padding: '8px' }} required />
+        </div>
+        <div className="form-group">
+          <label>Padre del novio:</label>
+          <input type="text" name="padreNovio" value={formData.padreNovio} onChange={handleChange} style={{ width: '100%', padding: '8px' }} required />
+        </div>
+        <div className="form-group">
+          <label>Madre del novio:</label>
+          <input type="text" name="madreNovio" value={formData.madreNovio} onChange={handleChange} style={{ width: '100%', padding: '8px' }} required />
+        </div>
+        <h2>Datos de la Novia</h2>
+        <div className="form-group">
+          <label>Nombre de la novia:</label>
+          <input type="text" name="nombreNovia" value={formData.nombreNovia} onChange={handleChange} style={{ width: '100%', padding: '8px' }} required />
+        </div>
+        <div className="form-group">
+          <label>Lugar de nacimiento de la novia:</label>
+          <input type="text" name="lugarNacimientoNovia" value={formData.lugarNacimientoNovia} onChange={handleChange} style={{ width: '100%', padding: '8px' }} required />
+        </div>
+        <div className="form-group">
+          <label>Padre de la novia:</label>
+          <input type="text" name="padreNovia" value={formData.padreNovia} onChange={handleChange} style={{ width: '100%', padding: '8px' }} required />
+        </div>
+        <div className="form-group">
+          <label>Madre de la novia:</label>
+          <input type="text" name="madreNovia" value={formData.madreNovia} onChange={handleChange} style={{ width: '100%', padding: '8px' }} required />
+        </div>
+        <div className="form-group">
+          <label>Testigos del acto:</label>
+          <input type="text" name="testigos" value={formData.testigos} onChange={handleChange} style={{ width: '100%', padding: '8px' }} required />
+        </div>
+        <div className="form-group">
+          <label>El párroco:</label>
+          <input type="text" name="parroco" value={formData.parroco} onChange={handleChange} style={{ width: '100%', padding: '8px' }} required />
+        </div>
+        <div className="form-group">
+          <label>En constancia, sello y firmo en Concepción el día:</label>
+          <input type="date" name="fechaEmision" value={formData.fechaEmision} onChange={handleChange} style={{ width: '100%', padding: '8px' }} required />
+        </div>
+        <div className="BOTON">
+          <button type="submit">Enviar</button>
+          <button type="button"> Volver</button>
+        </div>
+      </form>
     </div>
+  </div>
   );
 };
 
