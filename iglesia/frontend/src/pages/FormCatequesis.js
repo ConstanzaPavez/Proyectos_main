@@ -2,21 +2,16 @@ import React, { useState } from 'react';
 import '../css/estilo.css';
 import '../css/2doestilo.css';
 
-const CatechesisForm = () => {
+
+const BaptismalCertificateForm = () => {
   const [formData, setFormData] = useState({
-    bookNumber: '',
-    pageNumber: '',
-    date: '',
-    catechumenName: '',
-    run: '',
-    birthDate: '',
-    birthPlace: '',
-    fatherName: '',
-    motherName: '',
-    godparents: '',
-    certifier: '',
-    note: '',
-    issueDate: ''
+    padrino: '',
+    madrina: '',
+    ahijado: '',
+    fechaNacimiento: '',
+    rut: '',
+    parroquia: '',
+    fechaEmision: ''
   });
 
   const handleChange = (e) => {
@@ -29,8 +24,7 @@ const CatechesisForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes manejar el envío de los datos del formulario, por ejemplo, enviarlos a tu backend
-    console.log(formData);
+    console.log(formData); // Aquí puedes manejar el envío de los datos del formulario
   };
 
   return (
@@ -58,71 +52,68 @@ const CatechesisForm = () => {
           <p>Parroquia blablablablablal</p>
         </div>
       </div>
-      <div className="formulario">
-        <h1>Certificado de Catequesis</h1>
-        <form onSubmit={handleSubmit} className="personal-data-form">
+      <div className="formulario-container">
+        <h1>CERTIFICADO DE ENCUENTROS BAUTISMALES</h1>
+        <p>
+          El Párroco de la Parroquia san francisco de Asís Lorenzo Arenas, certifica que han realizado su catequesis pre bautismal en esta:
+        </p>
+
+        <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label>Número del libro:</label>
-            <input type="text" name="bookNumber" value={formData.bookNumber} onChange={handleChange} required />
-          </div>
-          <div className="form-group">
-            <label>Número de la página:</label>
-            <input type="text" name="pageNumber" value={formData.pageNumber} onChange={handleChange} required />
-          </div>
-          <div className="form-group">
-            <label>Nombre del bautizado:</label>
-            <input type="text" name="baptizedName" value={formData.baptizedName} onChange={handleChange} required />
-          </div>
-          <div className="form-group">
-            <label>Run:</label>
-            <input type="text" name="run" value={formData.run} onChange={handleChange} required />
-          </div>
-          <div className="form-group">
-            <label>Nacido el día:</label>
-            <input type="date" name="date" value={formData.date} onChange={handleChange} required />
-          </div>
-          <div className="form-group">
-            <label>Lugar de nacimiento del bautizado:</label>
-            <input type="text" name="birthPlace" value={formData.birthPlace} onChange={handleChange} required />
-          </div>
-          <div className="form-group">
-            <label>Hijo(a) de:</label>
-            <input type="text" name="aName" value={formData.aName} onChange={handleChange} required />
-          </div>
-          <div className="form-group">
-            <label>y de:</label>
-            <input type="text" name="bName" value={formData.bName} onChange={handleChange} required />
-          </div>
-          <div className="form-group">
-            <label>Padrinos:</label>
-            <input type="text" name="godparents" value={formData.godparents} onChange={handleChange} required />
-          </div>
-          <div className="form-group">
-            <label>Doy fe:</label>
-            <input type="text" name="certifier" value={formData.certifier} onChange={handleChange} required />
-          </div>
-          <div className="form-group">
-            <label>Nota:</label>
-            <input type="text" name="note" value={formData.note} />
-          </div>
-          <div className="form-group">
-            <label>En constancia, sello y firmo en Concepción el día:</label>
-            <input type="date" name="issueDate" value={formData.issueDate} onChange={handleChange} required />
-          </div>
-          <div className="form-group">
-            <div className="button-container">
-              <a href="/FormCatequesis">Enviar</a>
-              <a href="/" >Volver</a>
+            <label><strong>Padrinos:</strong></label>
+            <div>
+              <label>Don:</label>
+              <input type="text" name="padrino" value={formData.padrino} onChange={handleChange} required />
+            </div>
+            <div>
+              <label>Doña:</label>
+              <input type="text" name="madrina" value={formData.madrina} onChange={handleChange} required />
             </div>
           </div>
+
+          <div className="form-group">
+            <label><strong>Ahijado (a):</strong></label>
+            <input type="text" name="ahijado" value={formData.ahijado} onChange={handleChange} required />
+          </div>
+
+          <div className="form-group">
+            <label><strong>Fecha de nacimiento:</strong></label>
+            <input type="date" name="fechaNacimiento" value={formData.fechaNacimiento} onChange={handleChange} required  />
+          </div>
+
+          <div className="form-group">
+            <label><strong>RUT:</strong></label>
+            <input type="text" name="rut" value={formData.rut} onChange={handleChange} required />
+          </div>
+
+          <div className="form-group">
+            <p>Se extiende el presente certificado para ser presentado en la Parroquia:</p>
+            <input type="text" name="parroquia" value={formData.parroquia} onChange={handleChange} required  />
+          </div>
+
+          <div className="form-group">
+            <p>En donde deberán cumplir con los requisitos pertinentes.</p>
+          </div>
+
+          <div className="form-group">
+            <label><strong>Fecha de emisión:</strong></label>
+            <input type="date" name="fechaEmision" value={formData.fechaEmision} onChange={handleChange} required  />
+          </div>
+
+          <div className="form-group">
+            <label><strong>Firma y timbre Parroquia:</strong></label>
+            <input type="text" name="firma" value={formData.firma} onChange={handleChange} required />
+          </div>
+
+          <div className="BOTON">
+            <button type="submit">Enviar</button>
+            <button type="button">Volver</button>
+            <button type="reset">Restablecer formulario</button>
+          </div>
         </form>
-
       </div>
-
     </div>
   );
 };
 
-export default CatechesisForm;
-
-
+export default BaptismalCertificateForm;

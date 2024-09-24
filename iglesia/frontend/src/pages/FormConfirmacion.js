@@ -4,19 +4,14 @@ import '../css/2doestilo.css';
 
 const ConfirmationForm = () => {
   const [formData, setFormData] = useState({
-    bookNumber: '',
-    pageNumber: '',
-    confirmationDate: '',
-    confirmandName: '',
-    run: '',
-    birthDate: '',
-    birthPlace: '',
-    fatherName: '',
-    motherName: '',
-    sponsor: '',
-    certifier: '',
-    note: '',
-    issueDate: ''
+    libro: '',
+    pagina: '',
+    fecha: '',
+    nombreConfirmado: '',
+    monsenor: '',
+    de: '',
+    y: '',
+    padrinoMadrina: '',
   });
 
   const handleChange = (e) => {
@@ -29,96 +24,81 @@ const ConfirmationForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes manejar el envío de los datos del formulario, por ejemplo, enviarlos a tu backend
-    console.log(formData);
+    console.log(formData); // Aquí puedes manejar el envío de los datos del formulario al backend
   };
 
   return (
     <div className="todo">
-    <div class="navbar">
+      <div class="navbar">
 
-      <a class="" href="/"> Busqueda </a>
-      <a href=""> Reserva </a>
-      <a href=""> Inventario </a>
-      <a href=""> Aporte </a>
-      <a href=""> Donación </a>
-      <a href=""> Información </a>
-      <div class="topnav-right">
-        <a href="#search"> Buscar </a>
-        <a href="#about"> Login </a>
+        <a class="" href="/"> Busqueda </a>
+        <a href=""> Reserva </a>
+        <a href=""> Inventario </a>
+        <a href=""> Aporte </a>
+        <a href=""> Donación </a>
+        <a href=""> Información </a>
+        <div class="topnav-right">
+          <a href="#search"> Buscar </a>
+          <a href="#about"> Login </a>
+        </div>
       </div>
-    </div>
 
-    <div class="content">
-      <div class="left-content">
-        <p>Arzobispado de la Santísima Concepción</p>
-      </div>
-      <div class="right-content">
+      <div class="content">
+        <div class="left-content">
+          <p>Arzobispado de la Santísima Concepción</p>
+        </div>
+        <div class="right-content">
 
-        <p>Parroquia blablablablablal</p>
+          <p>Parroquia blablablablablal</p>
+        </div>
       </div>
-    </div>
-    <div className="formulario">
+    <div className="formulario-container" >
       <h1>Certificado de Confirmación</h1>
-      <form onSubmit={handleSubmit} className="personal-data-form">
+      <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Número del libro:</label>
-          <input type="text" name="bookNumber" value={formData.bookNumber} onChange={handleChange} required />
+          <input type="text" name="libro" value={formData.libro} onChange={handleChange} required />
         </div>
         <div className="form-group">
           <label>Número de la página:</label>
-          <input type="text" name="pageNumber" value={formData.pageNumber} onChange={handleChange} required />
+          <input type="text" name="pagina" value={formData.pagina} onChange={handleChange}  required />
+        </div>
+        <div className="form-group" >
+          <label>Fecha :</label>
+          <input type="date" name="fecha" value={formData.fecha} onChange={handleChange}  required />
         </div>
         <div className="form-group">
-          <label>Nombre del bautizado:</label>
-          <input type="text" name="baptizedName" value={formData.baptizedName} onChange={handleChange} required />
+          <label>Nombre del confirmado:</label>
+          <input type="text" name="nombreConfirmado" value={formData.nombreConfirmado} onChange={handleChange} required />
         </div>
         <div className="form-group">
-          <label>Run:</label>
-          <input type="text" name="run" value={formData.run} onChange={handleChange} required />
+          <label>Monseñor:</label>
+          <input type="text" name="monsenor" value={formData.monsenor} onChange={handleChange} required />
         </div>
-        <div className="form-group">
-          <label>Nacido el día:</label>
-          <input type="date" name="date" value={formData.date} onChange={handleChange} required />
-        </div>
-        <div className="form-group">
-          <label>Lugar de nacimiento del bautizado:</label>
-          <input type="text" name="birthPlace" value={formData.birthPlace} onChange={handleChange} required />
-        </div>
-        <div className="form-group">
-          <label>Hijo(a) de:</label>
-          <input type="text" name="aName" value={formData.aName} onChange={handleChange} required />
+        <div className="form-group" >
+          <label>Hijo(a) de :</label>
+          <input type="text" name="de" value={formData.de} onChange={handleChange}  required />
         </div>
         <div className="form-group">
           <label>y de:</label>
-          <input type="text" name="bName" value={formData.bName} onChange={handleChange} required />
+          <input type="text" name="y" value={formData.y} onChange={handleChange} required />
         </div>
-        <div className="form-group">
-          <label>Padrinos:</label>
-          <input type="text" name="godparents" value={formData.godparents} onChange={handleChange} required />
-        </div>
-        <div className="form-group">
-          <label>Doy fe:</label>
-          <input type="text" name="certifier" value={formData.certifier} onChange={handleChange} required />
-        </div>
-        <div className="form-group">
-          <label>Nota:</label>
-          <input type="text" name="note" value={formData.note} />
+        <div className="form-group" >
+          <label>Padrino (o) Madrina:</label>
+          <input type="text" name="padrinoMadrina" value={formData.padrinoMadrina} onChange={handleChange} required />
         </div>
         <div className="form-group">
           <label>En constancia, sello y firmo en Concepción el día:</label>
-          <input type="date" name="issueDate" value={formData.issueDate} onChange={handleChange} required />
+          <input type="date" name="fechaEmision" value={formData.fechaEmision} onChange={handleChange} required />
         </div>
-        <div className="form-group">
-          <div className="button-container">
-            <a href="/FormConfirmacion">Enviar</a>
-            <a href="/" >Volver</a>
-          </div>
+        <div className="BOTON">
+          <button type="submit">Enviar</button>
+          
+          <button type="button"> Volver</button>
+          <button type="reset"> Formulario de Confirmación </button>
         </div>
       </form>
-
     </div>
-
   </div>
   );
 };
