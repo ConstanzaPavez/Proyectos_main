@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../css/estilo.css';
 import '../css/2doestilo.css';
+import imagen from '../img/logo.png';
 
 const ConfirmationForm = () => {
   const [formData, setFormData] = useState({
@@ -48,7 +49,7 @@ const ConfirmationForm = () => {
           <p>Arzobispado de la Santísima Concepción</p>
         </div>
         <div class="right-content">
-
+        <img src={imagen} alt="avatar" className="avatar"/>
           <p>Parroquia blablablablablal</p>
         </div>
       </div>

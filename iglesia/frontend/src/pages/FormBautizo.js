@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../css/estilo.css';
 import '../css/2doestilo.css';
 import '../css/prueba.css';
-
+import imagen from '../img/logo.png';
 
 const BaptismForm = () => {
   const [formData, setFormData] = useState({
@@ -55,13 +55,14 @@ const BaptismForm = () => {
         <div class="left-content">
           <p>Arzobispado de la Santísima Concepción</p>
         </div>
-        <img src="logo.png" alt="Logo de la iglesia" className="avatar" />
+        <img src={imagen} alt="avatar" className="avatar"/>
         <div class="right-content">
           <p>Parroquia blablablablablal</p>
         </div>
       </div>
+      
       <div className="formulario-container" >
-        <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>Certificado de Bautizo</h1>
+        <h1>Certificado de Bautizo</h1>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label>Número del libro:</label>

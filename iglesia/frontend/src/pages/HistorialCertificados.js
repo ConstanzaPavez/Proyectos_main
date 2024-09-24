@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../css/estilo.css';
-
+import imagen from '../img/logo.png';
 
 
 const CertificateHistory = () => {
@@ -38,7 +38,7 @@ const CertificateHistory = () => {
         <div class="left-content">
           <p>Arzobispado de la Santísima Concepción</p>
         </div>
-        <img src="logo.png" alt="Logo de la iglesia" className="avatar" />
+        <img src={imagen} alt="avatar" className="avatar" />
         <div class="right-content">
           <p>Parroquia blablablablablal</p>
         </div>
